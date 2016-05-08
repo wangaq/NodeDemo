@@ -18,9 +18,8 @@ var clientHandler = function(socket) {
     socket.on('close',function() {
         console.log(socket.remoteAddress, socket.remotePort, 'disconnected');
     });
-}
+};
 
-
-var tcpWeb = net.createServer(clientHandler)
+var tcpWeb = net.createServer(clientHandler);
 tcpWeb.listen(PORT,HOST);
-console.log('tcp server running on http://' + HOST + ':' + PORT)
+console.log('tcp server running on http://' + HOST + ':' + PORT);
